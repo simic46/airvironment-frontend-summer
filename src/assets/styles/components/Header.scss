@@ -1,0 +1,35 @@
+@import "../variables";
+
+.header {
+  height: 80px;
+  border-bottom: 1px solid $color-white;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+
+  & h1 {
+    color: $color-white;
+    font-weight: 300;
+    &:hover {
+      cursor: pointer;
+    }
+
+    & span {
+      font-weight: 800;
+      color: $border-opacity-white;
+    }
+  }
+
+  & .nav {
+    margin-left: 100px;
+    margin-top: 10px;
+    color: $border-opacity-white;
+    &:hover {
+      cursor: pointer;
+    }
+
+    & span {
+      margin-right: 32px;
+    }
+  }
+}
