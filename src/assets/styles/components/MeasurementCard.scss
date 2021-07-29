@@ -1,0 +1,109 @@
+@import "../variables";
+
+.measurement-card-container {
+  width: 180px;
+  height: 220px;
+  background-color: $border-opacity-white;
+  font-family: Roboto;
+  color: $color-white;
+
+  .measurement-card-header {
+    //border: 1px solid red;
+    width: 146px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid $color-white;
+
+    .day {
+      font-size: 28px;
+    }
+    .date {
+      font-size: 16px;
+      padding-bottom: 4px;
+    }
+  }
+
+  hr {
+    width: 146px;
+    background: $color-white;
+  }
+
+  .measurement-row {
+    //border: 1pt red solid;
+    height: 48px;
+    display: flex;
+    //flex-direction: row;
+    align-items: center;
+    padding: 0 8px;
+    justify-content: space-between;
+
+    .left-section {
+      //border: 1pt #0c0202 solid;
+      //width: 64px;
+      //height: 26px;
+    }
+
+    .ppb {
+      font-size: 8px;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      //width: 64px;
+      height: 26px;
+      //border: 1pt #000000 solid;
+
+      .left-section-right-div {
+        margin-left: 4px;
+        // border: 1pt red solid;
+        //width: 36px;
+        height: 26px;
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+
+        .top {
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+
+          .pom {
+            margin-left: 4px;
+          }
+        }
+        .bottom {
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+
+          .pom {
+            margin-left: 4px;
+          }
+        }
+
+        .left-subsection {
+          //height: 13px;
+          //margin-left: 4px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .right-section {
+      font-size: 22px;
+    }
+  }
+
+  .image {
+    width: 24px;
+    height: 24px;
+  }
+
+  .day {
+    margin: 0 auto;
+  }
+}
