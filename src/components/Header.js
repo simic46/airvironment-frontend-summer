@@ -15,7 +15,9 @@ const Header = () => {
 
       <div className="nav">
         <span>ALL DATA</span>
-        <span>AVERAGES</span>
+        <Link to="/averages">
+          <span className="ave">AVERAGES</span>
+        </Link>
       </div>
     </div>
   );

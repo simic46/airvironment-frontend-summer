@@ -8,12 +8,12 @@ import {
   LowValueIcon,
 } from "../assets/icons";
 
-function MeasurementCard() {
+function MeasurementCard({ data, fetchData }) {
   return (
     <div className="measurement-card-container">
       <div className="measurement-card-header">
-        <span className="day">Wed</span>
-        <span className="date">07.jul.2021</span>
+        <span className="day">{data.dayName}</span>
+        <span className="date">{data.date}</span>
       </div>
 
       <div className="measurement-row">
@@ -24,17 +24,19 @@ function MeasurementCard() {
             {/*<div className="left-subsection">? 22C°</div>*/}
             <div className="top">
               <HighValueIcon />
-              <span className="pom">48</span>
+              <span className="pom">{data.max_temperature}</span>
               <span>C°</span>
             </div>
             <div className="bottom">
               <LowValueIcon />
-              <span className="pom">50</span>
+              <span className="pom">{data.min_temperature}</span>
               <span>C°</span>
             </div>
           </div>
         </div>
-        <div className="right-section">/ 26C°</div>
+        <div className="right-section">
+          / {fetchData.temperature.toFixed(0)}C°
+        </div>
       </div>
 
       <div className="measurement-row">
@@ -43,47 +45,38 @@ function MeasurementCard() {
           <div className="left-section-right-div">
             <div className="top">
               <HighValueIcon />
-              <span className="pom">48</span>
+              <span className="pom">{data.max_humidity}</span>
               <span>%</span>
             </div>
             <div className="bottom">
               <LowValueIcon />
-              <span className="pom">50</span>
+              <span className="pom">{data.min_humidity}</span>
               <span>%</span>
             </div>
           </div>
         </div>
-        <div className="right-section">/ 26%</div>
+        <div className="right-section">/ {fetchData.humidity.toFixed(0)}%</div>
       </div>
 
       <div className="measurement-row">
         <div className="left-section">
           <PollutionSmallIcon />
           <div className="left-section-right-div">
-            {/*<div className="left-subsection">*/}
-            {/*  <HighValueIcon />*/}
-            {/*  <span>0.78</span>*/}
-            {/*  <span className="ppb">ppb</span>*/}
-            {/*</div>*/}
-            {/*<div className="left-subsection">*/}
-            {/*  <span>?</span>*/}
-            {/*  <span>0.78</span>*/}
-            {/*  <span className="ppb">ppb</span>*/}
-            {/*</div>*/}
             <div className="top">
               <HighValueIcon />
-              <span className="pom">0.87</span>
+              <span className="pom">{data.max_pollution}</span>
               <span className="ppb">ppb</span>
             </div>
             <div className="bottom">
               <LowValueIcon />
-              <span className="pom">0.21</span>
+              <span className="pom">{data.min_pollution}</span>
               <span className="ppb">ppb</span>
             </div>
           </div>
         </div>
         <div className="right-section">
-          / 0.60<span className="ppb">ppb</span>
+          / {fetchData.pollution}
+          <span className="ppb">ppb</span>
         </div>
       </div>
     </div>

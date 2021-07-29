@@ -1,7 +1,6 @@
 import "./App.scss";
-import { Home } from "./pages";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
 
 function App() {
