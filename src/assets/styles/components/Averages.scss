@@ -1,0 +1,10 @@
+@import "../variables";
+
+.average_container {
+  height: calc(100vh - 80px - 52px);
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 52px;
+}

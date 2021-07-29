@@ -3,7 +3,9 @@
 .app {
   background: $background;
   width: 100vw;
+  max-height: 100vh;
   height: 100vh;
+  overflow: hidden;
   a {
     text-decoration: none;
   }

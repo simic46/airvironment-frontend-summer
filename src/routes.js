@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Home } from "./pages";
-import { MeasurementCard } from "./components";
+import { Averages, Home } from "./pages";
 
 const Routes = () => (
-  <Switch>
-    <Route path="/" exact component={Home} />
-    <Route path="/averages" exact component={MeasurementCard} />
-  </Switch>
+  <div className="container">
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/averages" exact component={Averages} />
+    </Switch>
+  </div>
 );
 export default Routes;
