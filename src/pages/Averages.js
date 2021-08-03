@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { MeasurementCard } from "../components/index";
 import "../assets/styles/components/Averages.scss";
 import { loadAverageValues } from "../redux/actions/averageActions";
@@ -10,7 +10,6 @@ function Averages({ averageValues, getAverageValues }) {
       all: true,
     };
     getAverageValues(params);
-    console.log(averageValues);
   }, [getAverageValues]);
 
   return averageValues ? (

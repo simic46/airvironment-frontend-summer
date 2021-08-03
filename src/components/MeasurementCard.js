@@ -8,10 +8,8 @@ import {
   HighValueIcon,
   LowValueIcon,
 } from "../assets/icons";
-import { format } from "prettier";
 
 function MeasurementCard({ averageValue }) {
-  console.log(averageValue);
   return (
     <div className="measurement-card-container">
       <div className="measurement-card-header">
